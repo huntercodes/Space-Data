@@ -14,6 +14,8 @@
 		4191CF6E28DA5EF000A2143F /* Space_DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191CF6D28DA5EF000A2143F /* Space_DataTests.swift */; };
 		4191CF7828DA5EF000A2143F /* Space_DataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191CF7728DA5EF000A2143F /* Space_DataUITests.swift */; };
 		4191CF7A28DA5EF000A2143F /* Space_DataUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191CF7928DA5EF000A2143F /* Space_DataUITestsLaunchTests.swift */; };
+		4191CF8A28DA5F1700A2143F /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191CF8928DA5F1700A2143F /* APICaller.swift */; };
+		4191CF8C28DA5FF200A2143F /* Apod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191CF8B28DA5FF200A2143F /* Apod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		4191CF7328DA5EF000A2143F /* Space DataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Space DataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4191CF7728DA5EF000A2143F /* Space_DataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_DataUITests.swift; sourceTree = "<group>"; };
 		4191CF7928DA5EF000A2143F /* Space_DataUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_DataUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4191CF8928DA5F1700A2143F /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		4191CF8B28DA5FF200A2143F /* Apod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,9 @@
 			children = (
 				4191CF5C28DA5EEF00A2143F /* Space_DataApp.swift */,
 				4191CF5E28DA5EEF00A2143F /* ContentView.swift */,
+				4191CF8828DA5F0400A2143F /* Models */,
+				4191CF8728DA5EFE00A2143F /* Views */,
+				4191CF8628DA5EF800A2143F /* Managers */,
 				4191CF6028DA5EF000A2143F /* Assets.xcassets */,
 				4191CF6228DA5EF000A2143F /* Preview Content */,
 			);
@@ -125,6 +132,29 @@
 				4191CF7928DA5EF000A2143F /* Space_DataUITestsLaunchTests.swift */,
 			);
 			path = "Space DataUITests";
+			sourceTree = "<group>";
+		};
+		4191CF8628DA5EF800A2143F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4191CF8928DA5F1700A2143F /* APICaller.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4191CF8728DA5EFE00A2143F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4191CF8828DA5F0400A2143F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4191CF8B28DA5FF200A2143F /* Apod.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4191CF5F28DA5EEF00A2143F /* ContentView.swift in Sources */,
+				4191CF8C28DA5FF200A2143F /* Apod.swift in Sources */,
+				4191CF8A28DA5F1700A2143F /* APICaller.swift in Sources */,
 				4191CF5D28DA5EEF00A2143F /* Space_DataApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
