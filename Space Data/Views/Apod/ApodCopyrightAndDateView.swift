@@ -1,12 +1,12 @@
 //
-//  CopyrightAndDateView.swift
+//  ApodCopyrightAndDateView.swift
 //
 //  Created by hunter downey on 9/20/22.
 //
 
 import SwiftUI
 
-struct CopyrightAndDateView: View {
+struct ApodCopyrightAndDateView: View {
     @StateObject var vm = ApodViewModel()
 
     var body: some View {
@@ -44,8 +44,8 @@ struct CopyrightAndDateView: View {
     }
 }
 
-struct CopyrightAndDateView_Previews: PreviewProvider {
+struct ApodCopyrightAndDateView_Previews: PreviewProvider {
     static var previews: some View {
-        CopyrightAndDateView()
+        ApodCopyrightAndDateView()
     }
 }

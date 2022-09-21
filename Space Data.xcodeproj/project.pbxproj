@@ -17,7 +17,14 @@
 		4191CF8C28DA5FF200A2143F /* Apod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191CF8B28DA5FF200A2143F /* Apod.swift */; };
 		4191CF9428DA9E6600A2143F /* ApodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191CF9328DA9E6600A2143F /* ApodViewModel.swift */; };
 		4191CF9828DAABD900A2143F /* ApodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191CF9728DAABD900A2143F /* ApodImageView.swift */; };
-		4191CF9A28DAAC7200A2143F /* CopyrightAndDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191CF9928DAAC7200A2143F /* CopyrightAndDateView.swift */; };
+		4191CF9A28DAAC7200A2143F /* ApodCopyrightAndDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191CF9928DAAC7200A2143F /* ApodCopyrightAndDateView.swift */; };
+		41D6807728DAC13A00B75EB9 /* ApodExplanationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6807628DAC13A00B75EB9 /* ApodExplanationView.swift */; };
+		41D6807928DAC18A00B75EB9 /* ApodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6807828DAC18A00B75EB9 /* ApodView.swift */; };
+		41D6807D28DAC3C000B75EB9 /* EarthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6807C28DAC3C000B75EB9 /* EarthView.swift */; };
+		41D6807F28DAC3E400B75EB9 /* EarthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6807E28DAC3E400B75EB9 /* EarthViewModel.swift */; };
+		41D6808128DAC41A00B75EB9 /* Earth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6808028DAC41A00B75EB9 /* Earth.swift */; };
+		41D6808328DACDC900B75EB9 /* EarthImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6808228DACDC900B75EB9 /* EarthImageView.swift */; };
+		41D6808528DACE8600B75EB9 /* EarthDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6808428DACE8600B75EB9 /* EarthDateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +58,14 @@
 		4191CF8B28DA5FF200A2143F /* Apod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apod.swift; sourceTree = "<group>"; };
 		4191CF9328DA9E6600A2143F /* ApodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodViewModel.swift; sourceTree = "<group>"; };
 		4191CF9728DAABD900A2143F /* ApodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodImageView.swift; sourceTree = "<group>"; };
-		4191CF9928DAAC7200A2143F /* CopyrightAndDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightAndDateView.swift; sourceTree = "<group>"; };
+		4191CF9928DAAC7200A2143F /* ApodCopyrightAndDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodCopyrightAndDateView.swift; sourceTree = "<group>"; };
+		41D6807628DAC13A00B75EB9 /* ApodExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodExplanationView.swift; sourceTree = "<group>"; };
+		41D6807828DAC18A00B75EB9 /* ApodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodView.swift; sourceTree = "<group>"; };
+		41D6807C28DAC3C000B75EB9 /* EarthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthView.swift; sourceTree = "<group>"; };
+		41D6807E28DAC3E400B75EB9 /* EarthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthViewModel.swift; sourceTree = "<group>"; };
+		41D6808028DAC41A00B75EB9 /* Earth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earth.swift; sourceTree = "<group>"; };
+		41D6808228DACDC900B75EB9 /* EarthImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthImageView.swift; sourceTree = "<group>"; };
+		41D6808428DACE8600B75EB9 /* EarthDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthDateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +155,8 @@
 		4191CF8728DA5EFE00A2143F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4191CF9728DAABD900A2143F /* ApodImageView.swift */,
-				4191CF9928DAAC7200A2143F /* CopyrightAndDateView.swift */,
+				41D6807B28DAC3B100B75EB9 /* Earth */,
+				41D6807A28DAC3A300B75EB9 /* Apod */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				4191CF8B28DA5FF200A2143F /* Apod.swift */,
+				41D6808028DAC41A00B75EB9 /* Earth.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,8 +174,30 @@
 			isa = PBXGroup;
 			children = (
 				4191CF9328DA9E6600A2143F /* ApodViewModel.swift */,
+				41D6807E28DAC3E400B75EB9 /* EarthViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		41D6807A28DAC3A300B75EB9 /* Apod */ = {
+			isa = PBXGroup;
+			children = (
+				41D6807828DAC18A00B75EB9 /* ApodView.swift */,
+				4191CF9928DAAC7200A2143F /* ApodCopyrightAndDateView.swift */,
+				4191CF9728DAABD900A2143F /* ApodImageView.swift */,
+				41D6807628DAC13A00B75EB9 /* ApodExplanationView.swift */,
+			);
+			path = Apod;
+			sourceTree = "<group>";
+		};
+		41D6807B28DAC3B100B75EB9 /* Earth */ = {
+			isa = PBXGroup;
+			children = (
+				41D6807C28DAC3C000B75EB9 /* EarthView.swift */,
+				41D6808228DACDC900B75EB9 /* EarthImageView.swift */,
+				41D6808428DACE8600B75EB9 /* EarthDateView.swift */,
+			);
+			path = Earth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,12 +330,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41D6807928DAC18A00B75EB9 /* ApodView.swift in Sources */,
+				41D6808328DACDC900B75EB9 /* EarthImageView.swift in Sources */,
 				4191CF5F28DA5EEF00A2143F /* ContentView.swift in Sources */,
 				4191CF8C28DA5FF200A2143F /* Apod.swift in Sources */,
+				41D6807728DAC13A00B75EB9 /* ApodExplanationView.swift in Sources */,
+				41D6807D28DAC3C000B75EB9 /* EarthView.swift in Sources */,
+				41D6808128DAC41A00B75EB9 /* Earth.swift in Sources */,
 				4191CF9428DA9E6600A2143F /* ApodViewModel.swift in Sources */,
 				4191CF9828DAABD900A2143F /* ApodImageView.swift in Sources */,
-				4191CF9A28DAAC7200A2143F /* CopyrightAndDateView.swift in Sources */,
+				4191CF9A28DAAC7200A2143F /* ApodCopyrightAndDateView.swift in Sources */,
 				4191CF5D28DA5EEF00A2143F /* Space_DataApp.swift in Sources */,
+				41D6808528DACE8600B75EB9 /* EarthDateView.swift in Sources */,
+				41D6807F28DAC3E400B75EB9 /* EarthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

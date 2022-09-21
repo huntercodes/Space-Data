@@ -1,6 +1,5 @@
 //
 //  ContentView.swift
-//  Space Data
 //
 //  Created by hunter downey on 9/20/22.
 //
@@ -8,39 +7,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    init() {
-        fetchData()
-    }
+    @StateObject var apodVM = ApodViewModel()
+    @StateObject var earthVM = EarthViewModel()
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("")
-        }
-        .padding()
-    }
-    
-    func fetchData() {
-        APICaller.shared.getApod { result in
-            DispatchQueue.main.async {
-                switch result {
-                    case .success(let data):
-                        var apod = Apod(
-                            copyright: data.copyright,
-                            date: data.date,
-                            explanation: data.explanation,
-                            hdurl: data.hdurl,
-                            title: data.title
-                        )
-                        print(apod.explanation)
-                    case .failure(let error):
-                        print(error.localizedDescription)
+        TabView {
+            ApodView()
+                .tabItem {
+                    Label("APOD", systemImage: "moon.stars")
                 }
-            }
+            EarthView()
+                .tabItem {
+                    Label("EARTH", systemImage: "globe.americas.fill")
+                }
         }
+        .accentColor(.red)
     }
 }
 
