@@ -24,7 +24,7 @@ class EarthViewModel: ObservableObject {
     )
     
     func fetch() {
-        guard let url = URL(string: "https://api.nasa.gov/planetary/earth/assets?lon=-95.33&lat=29.78&date=2022-01-01&&dim=0.10&api_key=" + Constants.apiKey) else {
+        guard let url = URL(string: "https://api.nasa.gov/planetary/earth/assets?lon=-95.33&lat=29.78&date=2018-01-01&&dim=0.10&api_key=" + Constants.apiKey) else {
                 return
         }
         

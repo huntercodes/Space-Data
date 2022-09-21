@@ -11,18 +11,24 @@ struct EarthImageView: View {
     @StateObject var vm = EarthViewModel()
     
     var body: some View {
-        AsyncImage(url: URL(string: vm.earth.url))
-            .scaledToFill()
-            .frame(width: 347, height: 547)
-            .clipShape(RoundedRectangle(cornerRadius: 7))
-            .overlay(RoundedRectangle(cornerRadius: 7)
-                .stroke(lineWidth: 3)
+        AsyncImage(url: URL(string: vm.earth.url)) { image in
+            image
+                .resizable()
+                .scaledToFit()
+        } placeholder: {
+            ProgressView()
+        }
+        .frame(width: 357, height: 357)
+        .background(Color.gray)
+        .clipShape(RoundedRectangle(cornerRadius: 13))
+        .overlay(
+            RoundedRectangle(cornerRadius: 13)
+                .stroke(lineWidth: 2)
                 .foregroundColor(.primary)
-            )
-            .padding(1)
-            .onAppear {
-                vm.fetch()
-            }
+        )
+        .onAppear {
+            vm.fetch()
+        }
     }
 }
 

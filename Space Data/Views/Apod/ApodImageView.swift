@@ -10,18 +10,24 @@ struct ApodImageView: View {
     @StateObject var vm = ApodViewModel()
     
     var body: some View {
-        AsyncImage(url: URL(string: vm.apod.hdurl))
-            .scaledToFill()
-            .frame(width: 347, height: 347)
-            .clipShape(RoundedRectangle(cornerRadius: 7))
-            .overlay(RoundedRectangle(cornerRadius: 7)
-                .stroke(lineWidth: 3)
+        AsyncImage(url: URL(string: vm.apod.hdurl)) { image in
+            image
+                .resizable()
+                .scaledToFill()
+        } placeholder: {
+            ProgressView()
+        }
+        .frame(width: 357, height: 357)
+        .background(Color.gray)
+        .clipShape(RoundedRectangle(cornerRadius: 13))
+        .overlay(
+            RoundedRectangle(cornerRadius: 13)
+                .stroke(lineWidth: 2)
                 .foregroundColor(.primary)
-            )
-            .padding(1)
-            .onAppear {
-                vm.fetch()
-            }
+        )
+        .onAppear {
+            vm.fetch()
+        }
     }
 }
 

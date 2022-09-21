@@ -15,7 +15,13 @@ struct EarthView: View {
             Text("Satellite Earth View")
                 .font(.title2)
             
+            Spacer()
+                .frame(maxHeight: 15)
+            
             EarthDateView()
+            
+            Spacer()
+                .frame(maxHeight: 15)
             
             EarthImageView()
         }
