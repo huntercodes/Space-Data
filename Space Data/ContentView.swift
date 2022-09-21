@@ -7,8 +7,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var apodVM = ApodViewModel()
-    @StateObject var earthVM = EarthViewModel()
+    @StateObject var eVM = EarthViewModel()
+    @StateObject var aVM = ApodViewModel()
     
     var body: some View {
         TabView {
@@ -22,6 +22,10 @@ struct ContentView: View {
                 }
         }
         .accentColor(.red)
+        .onAppear {
+            eVM.fetch()
+            aVM.fetch()
+        }
     }
 }
 

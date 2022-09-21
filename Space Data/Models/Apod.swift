@@ -1,6 +1,5 @@
 //
 //  Apod.swift
-//  Space Data
 //
 //  Created by hunter downey on 9/20/22.
 //

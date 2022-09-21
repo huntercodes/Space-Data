@@ -1,6 +1,5 @@
 //
 //  ApodView.swift
-//  Space Data
 //
 //  Created by hunter downey on 9/20/22.
 //
@@ -14,6 +13,7 @@ struct ApodView: View {
         VStack {
             Text("Astrology Photo Of The Day")
                 .font(.title2)
+                .onAppear(perform: vm.fetch)
             
             ApodCopyrightAndDateView()
             

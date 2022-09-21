@@ -1,6 +1,5 @@
 //
 //  ApodExplanationView.swift
-//  Space Data
 //
 //  Created by hunter downey on 9/20/22.
 //
@@ -15,6 +14,7 @@ struct ApodExplanationView: View {
             Text("Explanation: " + vm.apod.explanation)
                 .font(.caption)
                 .frame(width: 347, height: 347)
+                .onAppear(perform: vm.fetch)
         }
     }
 }

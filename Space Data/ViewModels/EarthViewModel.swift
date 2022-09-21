@@ -1,11 +1,9 @@
 //
 //  EarthViewModel.swift
-//  Space Data
 //
 //  Created by hunter downey on 9/20/22.
 //
 
-import Foundation
 import SwiftUI
 
 class EarthViewModel: ObservableObject {
@@ -19,16 +17,16 @@ class EarthViewModel: ObservableObject {
     }
     
     @Published var earth = Earth(
-        date: "2018-01-03T16:50:46.890000",
-        url: "https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/thumbnails/78ef0163adc2d4981e96b6a47dbccd48-5ad4e5bf6d136b979bcb7dbeb913e2e9:getPixels"
+        date: "2020-01-25 T 16:50:46.188000",
+        url: "https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/thumbnails/2d2481df055ec42b95771985686eca91-0a57d20322f459533f41a1759e57a30b:getPixels"
     )
     
     func fetch() {
-        guard let url = URL(string: "https://api.nasa.gov/planetary/earth/assets?lon=-95.33&lat=29.78&date=2018-01-01&&dim=0.10&api_key=" + Constants.apiKey) else {
+        guard let url = URL(string: "https://api.nasa.gov/planetary/earth/assets?lon=-95.33&lat=29.78&date=2020-01-12&&dim=0.10&api_key=" + Constants.apiKey) else {
                 return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             guard let data = data, error == nil else {
                 return
             }
@@ -36,7 +34,7 @@ class EarthViewModel: ObservableObject {
             do {
                 let result = try JSONDecoder().decode(Earth.self, from: data)
                 DispatchQueue.main.async {
-                    self.earth = result
+                    self?.earth = result
                 }
             } catch {
                 print(error)
@@ -44,5 +42,5 @@ class EarthViewModel: ObservableObject {
         }
         task.resume()
     }
-    
+
 }

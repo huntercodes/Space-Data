@@ -4,7 +4,6 @@
 //  Created by hunter downey on 9/20/22.
 //
 
-import Foundation
 import SwiftUI
 
 class ApodViewModel: ObservableObject {
@@ -18,15 +17,15 @@ class ApodViewModel: ObservableObject {
     }
     
     @Published var apod = Apod(
-        copyright: "Chris Willocks",
+        copyright: "Francesco Antonucci",
         date: "2022-09-20",
-        explanation: "What's happening in the Statue of Liberty nebula?  Bright stars and interesting molecules are forming and being liberated. The complex nebula resides in the star forming region called RCW 57, and besides the iconic monument, to some looks like a flying superhero or a weeping angel.  By digitally removing the stars, this re-assigned color image showcases dense knots of dark interstellar dust, fields of glowing hydrogen gas ionized by these stars, and great loops of gas expelled by dying stars. A detailed study of NGC 3576, also known as NGC 3582 and NGC 3584, uncovered at least 33 massive stars in the end stages of formation, and the clear presence of the complex carbon molecules known as polycyclic aromatic hydrocarbons (PAHs). PAHs are thought to be created in the cooling gas of star forming regions, and their development in the Sun's formation nebula five billion years ago may have been an important step in the development of life on Earth.   Your Sky Surprise: What picture did APOD feature on your birthday? (post 1995)",
-        hdurl: "https://apod.nasa.gov/apod/image/2209/NGC3576_Willocks_3300_Starless.jpg",
-        title: "Star Forming Region NGC 3582 without Stars"
+        explanation: "The bright clusters and nebulae of planet Earth\'s night sky are often named for flowers or insects. Though its wingspan covers over 3 light-years, NGC 6302 is no exception. With an estimated surface temperature of about 250,000 degrees C, the dying central star of this particular planetary nebula has become exceptionally hot, shining brightly in ultraviolet light but hidden from direct view by a dense torus of dust.  This sharp close-up of the dying star\'s nebula was recorded in 2009 by the Hubble Space Telescope\'s Wide Field Camera 3, and is presented here in reprocessed colors.  Cutting across a bright cavity of ionized gas, the dust torus surrounding the central star is near the center of this view, almost edge-on to the line-of-sight. Molecular hydrogen has been detected in the hot star\'s dusty cosmic shroud. NGC 6302 lies about 4,000 light-years away in the arachnologically correct constellation of the Scorpion (Scorpius).",
+        hdurl: "https://apod.nasa.gov/apod/image/1410/butterflyblue_hst_3919.jpg",
+        title: "The Butterfly Nebula from Hubble"
     )
     
     func fetch() {
-        guard let url = URL(string: "https://api.nasa.gov/planetary/apod?api_key=" + Constants.apiKey) else {
+        guard let url = URL(string: "https://api.nasa.gov/planetary/apod?api_key=" + Constants.apiKey + "&date=2014-10-01") else {
             return
         }
         

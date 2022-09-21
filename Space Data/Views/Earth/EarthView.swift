@@ -14,6 +14,7 @@ struct EarthView: View {
         VStack {
             Text("Satellite Earth View")
                 .font(.title2)
+                .onAppear(perform: vm.fetch)
             
             Spacer()
                 .frame(maxHeight: 15)

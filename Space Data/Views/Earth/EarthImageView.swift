@@ -19,16 +19,14 @@ struct EarthImageView: View {
             ProgressView()
         }
         .frame(width: 357, height: 357)
-        .background(Color.gray)
+        .background(Color.black.gradient)
         .clipShape(RoundedRectangle(cornerRadius: 13))
         .overlay(
             RoundedRectangle(cornerRadius: 13)
                 .stroke(lineWidth: 2)
                 .foregroundColor(.primary)
         )
-        .onAppear {
-            vm.fetch()
-        }
+        .onAppear(perform: vm.fetch)
     }
 }
 
