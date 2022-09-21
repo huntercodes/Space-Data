@@ -18,7 +18,7 @@ class EarthViewModel: ObservableObject {
     
     @Published var earth = Earth(
         date: "2020-01-25 T 16:50:46.188000",
-        url: "https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/thumbnails/2d2481df055ec42b95771985686eca91-0a57d20322f459533f41a1759e57a30b:getPixels"
+        url: ""
     )
     
     func fetch() {
