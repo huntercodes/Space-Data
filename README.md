@@ -1,5 +1,5 @@
 # Space-Data
-NASA APIs / SwiftUI / MVVM
+Practice project for API Calls following MVVM. 
 
 ## About
 
