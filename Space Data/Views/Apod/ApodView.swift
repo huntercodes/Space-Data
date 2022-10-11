@@ -11,7 +11,7 @@ struct ApodView: View {
     
     var body: some View {
         VStack {
-            Text("Astrology Photo Of The Day")
+            Text("Astronomy Picture Of The Day")
                 .font(.title2)
                 .onAppear(perform: vm.fetch)
             
